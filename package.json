@@ -1,0 +1,55 @@
+{
+  "name": "rbi-exchange-rate",
+  "version": "1.0.1",
+  "description": "Official Reserve Bank of India (India) daily exchange rates — 6 currencies vs INR, history since 2003. Zero-dependency Node.js/TypeScript client.",
+  "keywords": [
+    "rbi",
+    "reserve",
+    "bank",
+    "of",
+    "india",
+    "exchange-rate",
+    "exchange-rates",
+    "currency",
+    "forex",
+    "fx",
+    "inr",
+    "central-bank",
+    "official-rates",
+    "india",
+    "api",
+    "typescript"
+  ],
+  "homepage": "https://allratestoday.com/central-bank-rates-api/rbi/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllRates-Today/rbi-exchange-rate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AllRates-Today/rbi-exchange-rate/issues"
+  },
+  "license": "MIT",
+  "author": "AllRatesToday <hello@allratestoday.com> (https://allratestoday.com)",
+  "type": "module",
+  "main": "./index.cjs",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    }
+  },
+  "files": [
+    "index.mjs",
+    "index.cjs",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false
+}
