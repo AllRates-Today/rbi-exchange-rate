@@ -70,10 +70,10 @@ const pair = await getRate('USD', 'INR', { apiKey: 'art_live_...' });
 {
   bank: 'rbi',
   name: 'Reserve Bank of India',
-  rate_date: '2026-08-11',   // Reserve Bank of India's own publication date
+  rate_date: '2026-09-09',   // Reserve Bank of India's own publication date
   source: 'USD',
   target: 'INR',
-  rate: 95.4321,
+  rate: 95.1483,
   rate_type: 'reference',
   derived: false,
   method: 'published',
@@ -98,9 +98,9 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'rbi',
   name: 'Reserve Bank of India',
-  rate_date: '2026-08-11',
+  rate_date: '2026-09-09',
   rates: [
-    { "base": "USD", "quote": "INR", "type": "reference", "value": 95.4321 },
+    { "base": "USD", "quote": "INR", "type": "reference", "value": 95.1483 },
     // … the rest of the published table (6 currencies vs INR)
   ],
   disclaimer: '…'
@@ -140,7 +140,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'rbi-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'INR', from: '2026-01-01', to: '2026-08-11' },
+  { source: 'USD', target: 'INR', from: '2026-01-01', to: '2026-09-09' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -153,11 +153,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'INR',
   from: '2026-01-01',
-  to: '2026-08-11',
+  to: '2026-09-09',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-08-11', rate: 95.4321, rate_type: 'reference', derived: false, method: 'published' },
+    { date: '2026-09-09', rate: 95.1483, rate_type: 'reference', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -170,9 +170,9 @@ Pass `{ symbol: 'USD' }` instead of `source`/`target` to get the raw published r
 
 ## 🗺️ Currencies covered
 
-Reserve Bank of India currently publishes rates covering **7 currencies** (as of the latest table):
+Reserve Bank of India currently publishes rates covering **6 currencies** against the INR (as of the latest table):
 
-`AED` · `EUR` · `GBP` · `IDR` · `INR` · `JPY` · `USD`
+🇦🇪 `AED` · 🇪🇺 `EUR` · 🇬🇧 `GBP` · 🇮🇩 `IDR` · 🇯🇵 `JPY` · 🇺🇸 `USD`
 
 ## ⚖️ Published vs derived rates
 
@@ -235,6 +235,14 @@ getRate('USD', 'INR', { apiKey: 'art_live_...' }).then((pair) => console.log(pai
 | `getLatestRates({ apiKey })` | Free | The central bank's full latest published table |
 | `getRatesForDate(date, { apiKey, source?, target? })` | Paid | The official table (or one pair) for a YYYY-MM-DD date |
 | `getHistory({ symbol \| source+target, from?, to? }, { apiKey })` | Paid | Daily series since 2003 |
+
+## 📥 Bulk data (no key)
+
+Need the whole archive rather than an API call? The same published tables are mirrored daily as open data:
+
+- Hugging Face: [AllRates/central-bank-exchange-rates](https://huggingface.co/datasets/AllRates/central-bank-exchange-rates) — one CSV per institution (`rates/rbi.csv`)
+- Kaggle: [allratestoday/central-bank-exchange-rates](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates)
+- CDN JSON: `https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/rbi/latest.json`
 
 ## 🔗 Links
 
