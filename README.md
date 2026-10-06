@@ -85,10 +85,10 @@ const pair = await getRate('USD', 'INR', { apiKey: 'art_live_...' });
 {
   bank: 'rbi',
   name: 'Reserve Bank of India',
-  rate_date: '2026-09-25',   // Reserve Bank of India's own publication date
+  rate_date: '2026-10-06',   // Reserve Bank of India's own publication date
   source: 'USD',
   target: 'INR',
-  rate: 95.8918,
+  rate: 96.4348,
   rate_type: 'reference',
   derived: false,
   method: 'published',
@@ -113,9 +113,9 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'rbi',
   name: 'Reserve Bank of India',
-  rate_date: '2026-09-25',
+  rate_date: '2026-10-06',
   rates: [
-    { "base": "USD", "quote": "INR", "type": "reference", "value": 95.8918 },
+    { "base": "USD", "quote": "INR", "type": "reference", "value": 96.4348 },
     // … the rest of the published table (6 currencies vs INR)
   ],
   disclaimer: '…'
@@ -155,7 +155,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'rbi-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'INR', from: '2026-01-01', to: '2026-09-25' },
+  { source: 'USD', target: 'INR', from: '2026-01-01', to: '2026-10-06' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -168,11 +168,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'INR',
   from: '2026-01-01',
-  to: '2026-09-25',
+  to: '2026-10-06',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-09-25', rate: 95.8918, rate_type: 'reference', derived: false, method: 'published' },
+    { date: '2026-10-06', rate: 96.4348, rate_type: 'reference', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
