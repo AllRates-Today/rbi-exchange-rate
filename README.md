@@ -40,16 +40,16 @@ The open endpoint serves the *latest* table only and asks for a visible attribut
 Today's full Reserve Bank of India table, straight from the central bank's latest publication. On GitHub it is refreshed by [a daily Action](.github/workflows/daily-table.yml) that reads the keyless endpoint above and commits only when the central bank publishes a new table; the copy on npm is as of the package's publish date.
 
 <!-- daily-table:start -->
-Published **2026-10-08** by Reserve Bank of India — 6 rates. Updated 2026-10-08.
+Published **2026-10-09** by Reserve Bank of India — 6 rates. Updated 2026-10-09.
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| AED | INR | reference | 26.3477 |
-| EUR | INR | reference | 108.3774 |
-| GBP | INR | reference | 127.7414 |
-| IDR | INR | reference | 0.00540567 |
-| JPY | INR | reference | 0.6119 |
-| USD | INR | reference | 96.7733 |
+| AED | INR | reference | 26.3049 |
+| EUR | INR | reference | 108.4728 |
+| GBP | INR | reference | 127.8859 |
+| IDR | INR | reference | 0.0054012 |
+| JPY | INR | reference | 0.6108 |
+| USD | INR | reference | 96.6149 |
 
 Source: [Official rates published by RBI, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/rbi/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->
