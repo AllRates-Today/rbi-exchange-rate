@@ -214,7 +214,7 @@ Reserve Bank of India currently publishes rates covering **6 currencies** agains
 
 ## 🏛️ Source
 
-The Reserve Bank of India is India's central bank. It publishes daily reference rates for the rupee against major currencies — the standard reference for Indian accounting, customs, and compliance, with an archive reaching back to 2003.
+The Reserve Bank of India (RBI) is India's central bank. Its daily reference rates for the rupee against major currencies are the standard reference for Indian accounting, tax and compliance. Since 10 July 2018 the rates have been computed and announced by Financial Benchmarks India Ltd (FBIL); the RBI continues to publish them in its Reference Rate Archive, which reaches back to 2003 and is the table served here.
 
 - Publisher's own page: [Reference rate archive](https://www.rbi.org.in/scripts/referenceratearchive.aspx) · [www.rbi.org.in](https://www.rbi.org.in)
 - Publication: every business day; the exact schedule, freshness status and any current delay are on the [Reserve Bank of India rates page](https://allratestoday.com/central-bank-rates-api/rbi/)
@@ -245,7 +245,7 @@ curl "https://allratestoday.com/api/v1/central-bank/rbi/latest?format=xml&api_ke
 - MCP server: `npx -y @allratestoday/central-bank-mcp` (stdio) or the hosted endpoint `https://allratestoday.com/api/mcp` — tools for official rates, history, cross-bank comparison and publication calendars
 - Already using the general SDK or MCP server? Since 2026-10-01 [`@allratestoday/sdk`](https://www.npmjs.com/package/@allratestoday/sdk) 1.4+ has `officialRates('rbi')` and [`@allratestoday/mcp-server`](https://www.npmjs.com/package/@allratestoday/mcp-server) 0.6+ has a `get_official_rates` tool — both return this source's latest table with no key, so you can add it without a second dependency
 - Claude Code plugin (no key): `/plugin marketplace add AllRates-Today/claude-code-plugin` then `/plugin install allratestoday@allratestoday` — bundles both MCP servers plus an `/official-rate rbi ...` command
-- Need dated tables or history for an evaluation? Agents can self-issue a trial key with no signup: `POST https://allratestoday.com/api/agent/keys` (send `Content-Type: application/json`) returns a 100-call key valid 7 days; the MCP servers expose it as `request_trial_key`
+- Evaluating? Agents can self-issue a trial key with no signup: `POST https://allratestoday.com/api/agent/keys` (send `Content-Type: application/json`) returns a 100-call key valid 7 days that covers the free-plan methods (latest table, pairs); dated tables and history need a [paid plan](https://allratestoday.com/pricing/). The MCP servers expose it as `request_trial_key`
 - Machine-readable site guide: [llms.txt](https://allratestoday.com/llms.txt) · [for-ai-agents](https://allratestoday.com/for-ai-agents/)
 
 ## ⚖️ Published vs derived rates
