@@ -1,6 +1,6 @@
 {
   "name": "rbi-exchange-rate",
-  "version": "1.3.18",
+  "version": "1.3.19",
   "description": "Official Reserve Bank of India (India) daily exchange rates — 6 currencies vs INR, history since 2003. Zero-dependency Node.js/TypeScript client.",
   "keywords": [
     "rbi",
@@ -27,7 +27,17 @@
     "central-bank",
     "official-rates",
     "api",
-    "typescript"
+    "typescript",
+    "money",
+    "convert",
+    "conversion",
+    "exchange",
+    "rate",
+    "accounting",
+    "utilities",
+    "number",
+    "cart",
+    "ecommerce"
   ],
   "homepage": "https://allratestoday.com/central-bank-rates-api/rbi/",
   "repository": {
