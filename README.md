@@ -47,16 +47,16 @@ The image is rendered live from the keyless endpoint above, so it follows the ce
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-10-28 by Reserve Bank of India — 6 rates. Updated 2026-10-28.</summary>
+<summary>Table as text: published 2026-10-29 by Reserve Bank of India — 6 rates. Updated 2026-10-29.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| AED | INR | reference | 25.9273 |
-| EUR | INR | reference | 105.8641 |
-| GBP | INR | reference | 126.4657 |
-| IDR | INR | reference | 0.00523782 |
-| JPY | INR | reference | 0.6031 |
-| USD | INR | reference | 95.2278 |
+| AED | INR | reference | 25.9656 |
+| EUR | INR | reference | 106.2145 |
+| GBP | INR | reference | 126.9581 |
+| IDR | INR | reference | 0.00525834 |
+| JPY | INR | reference | 0.6042 |
+| USD | INR | reference | 95.3688 |
 
 </details>
 
@@ -221,6 +221,7 @@ The Reserve Bank of India (RBI) is India's central bank. Its daily reference rat
 
 - Publisher's own page: [Reference rate archive](https://www.rbi.org.in/scripts/referenceratearchive.aspx) · [www.rbi.org.in](https://www.rbi.org.in)
 - Publication: every business day; the exact schedule, freshness status and any current delay are on the [Reserve Bank of India rates page](https://allratestoday.com/central-bank-rates-api/rbi/)
+- In the API: usually by **09:15 UTC** (measured over the last 10 publications). Schedule a sync at or after that time and retry hourly until `rate_date` moves; every response carries the same figure as `available_by_utc` — see [when to poll](https://allratestoday.com/docs/#when-to-poll)
 - Values are stored unmodified, with the publisher's own `rate_date` on every row — see the [methodology](https://allratestoday.com/official-rates-methodology/)
 
 ## 🧭 Reading the numbers
