@@ -32,16 +32,16 @@ The image is rendered live from the keyless endpoint, so it follows the central 
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-11-12 by Reserve Bank of India — 6 rates. Updated 2026-11-12.</summary>
+<summary>Table as text: published 2026-11-13 by Reserve Bank of India — 6 rates. Updated 2026-11-13.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| AED | INR | reference | 25.5288 |
-| EUR | INR | reference | 103.8419 |
-| GBP | INR | reference | 124.2808 |
-| IDR | INR | reference | 0.00513656 |
-| JPY | INR | reference | 0.5866 |
-| USD | INR | reference | 93.765 |
+| AED | INR | reference | 25.6477 |
+| EUR | INR | reference | 104.1814 |
+| GBP | INR | reference | 124.614 |
+| IDR | INR | reference | 0.00517133 |
+| JPY | INR | reference | 0.5894 |
+| USD | INR | reference | 94.1997 |
 
 </details>
 
